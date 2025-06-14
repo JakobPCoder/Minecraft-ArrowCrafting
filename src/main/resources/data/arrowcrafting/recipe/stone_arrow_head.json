@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    " S"
+  ],
+  "key": {
+    "S": "minecraft:stone"
+  },
+  "result": {
+    "id": "arrowcrafting:stone_arrow_head",
+    "count": 4
+  }
+} 

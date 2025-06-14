@@ -1,0 +1,97 @@
+---
+description: How to add a Custom Arrow, Arrow Entity, Arrow Head and so on.
+globs: 
+alwaysApply: false
+---
+### Adding a New Custom Arrow Material: A Quick Guide
+
+This guide provides a streamlined overview of adding a new custom arrow material to the game, assuming you're leveraging existing `CustomArrowItem` and `CustomArrowEntity` classes for damage and will create your own textures.
+
+---
+
+**Steps:**
+
+1.  **Define Items: `src/main/java/jak0bw/arrowcrafting/ModItems.java`**
+    *   Add `public static final Item` declarations for both the new arrow head and the new arrow.
+    ```java
+    // ... existing code ...
+    public static final Item DIAMOND_ARROW_HEAD = registerItem("diamond_arrow_head", settings -> new CustomArrowHeadItem(settings), new Item.Settings());
+    // ... existing code ...
+    public static final Item DIAMOND_ARROW = registerItem("diamond_arrow", settings -> new CustomArrowItem(settings, 2.0), new Item.Settings()); // Adjust damage
+    // ... existing code ...
+    ```
+
+2.  **Update Arrow Tag: `src/main/resources/data/minecraft/tags/item/arrows.json`**
+    *   Add your new arrow's identifier to the `values` array.
+    ```json
+    {
+      "replace": false,
+      "values": [
+        "arrowcrafting:stone_arrow",
+        "arrowcrafting:flint_arrow",
+        "arrowcrafting:iron_arrow",
+        "arrowcrafting:diamond_arrow" // Add this
+      ]
+    }
+    ```
+
+3.  **Create Item Models: `src/main/resources/assets/arrowcrafting/models/item/`**
+    *   Create `diamond_arrow.json` and `diamond_arrow_head.json`.
+    *   `diamond_arrow.json`
+        ```json
+        {
+          "parent": "item/generated",
+          "textures": { "layer0": "arrowcrafting:item/diamond_arrow" }
+        }
+        ```
+    *   `diamond_arrow_head.json`
+        ```json
+        {
+          "parent": "item/generated",
+          "textures": { "layer0": "arrowcrafting:item/diamond_arrow_head" }
+        }
+        ```
+
+4.  **Link Item to Model: `src/main/resources/assets/arrowcrafting/items/`**
+    *   Create `diamond_arrow.json` to link the item ID to its model.
+    ```json
+    {
+      "model": {
+        "type": "model",
+        "model": "arrowcrafting:item/diamond_arrow"
+      }
+    }
+    ```
+
+5.  **Add Item Textures: `src/main/resources/assets/arrowcrafting/textures/item/`**
+    *   Create your PNG texture files:
+        *   `diamond_arrow.png`
+        *   `diamond_arrow_head.png`
+
+6.  **Define Crafting Recipes: `src/main/resources/data/arrowcrafting/recipe/`**
+    *   Create `diamond_arrow.json` and `diamond_arrow_head.json`.
+    *   `diamond_arrow.json`
+        ```json
+        {
+          "type": "minecraft:crafting_shaped",
+          "pattern": ["H","S","F"],
+          "key": {
+            "H": "arrowcrafting:diamond_arrow_head",
+            "S": "minecraft:stick",
+            "F": "minecraft:feather"
+          },
+          "result": { "id": "arrowcrafting:diamond_arrow", "count": 1 }
+        }
+        ```
+    *   `diamond_arrow_head.json`
+        ```json
+        {
+          "type": "minecraft:crafting_shaped",
+          "pattern": ["DD"," D"],
+          "key": { "D": "minecraft:diamond" }, // Or your chosen material
+          "result": { "id": "arrowcrafting:diamond_arrow_head", "count": 4 }
+        }
+        ```
+
+
+

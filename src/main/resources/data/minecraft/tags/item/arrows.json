@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "arrowcrafting:stone_arrow",
+    "arrowcrafting:flint_arrow",
+    "arrowcrafting:iron_arrow"
+  ]
+} 
