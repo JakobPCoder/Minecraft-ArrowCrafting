@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "H",
-    "S",
-    "F"
+    "  H",
+    " S ",
+    "F  "
   ],
   "key": {
     "H": "arrowcrafting:wooden_arrow_head",

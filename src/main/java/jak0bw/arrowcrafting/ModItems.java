@@ -96,7 +96,7 @@ public class ModItems {
     // Stone Arrow item (generic)
     public static final Item STONE_ARROW = registerItem(
         "stone_arrow",
-        settings -> new CustomArrowItem(settings, 0.7),
+        settings -> new CustomArrowItem(settings, 0.6),
         new Item.Settings()
     );
 

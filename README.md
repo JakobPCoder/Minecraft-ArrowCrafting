@@ -37,13 +37,20 @@ This makes them compatible with all vanilla modifiers.
 They are crafted from 1 arrow head, 1 arrow shaft and 1 arrow fletching.
 
 New arrow types:
-- **Wooden Arrow**: 40%
-- **Stone Arrow**: 70%
-- **Flint Arrow**: base damage
-- **Gold Arrow**: +10%
-- **Copper Arrow**: +20%
-- **Iron Arrow**: +40%
-- **Diamond Arrow** : +80%
+- **Wooden Arrow**: **40%** 
+    - *Takes 5 hits for a normal mob.*
+- **Stone Arrow**: **60%** 
+    - *Takes 4 hits for a normal mob.*
+- **Flint Arrow**: Base damage. 
+    - *Take 3 hits for a normal mob.*
+- **Gold Arrow**: **+10%** 
+    - *Takes 2 hits for a normal mob.*
+- **Copper Arrow**: **+20%** 
+    - *Only takes 2 hits for a normal mob. 1 hit for a zombie.*
+- **Iron Arrow**: **+40%** 
+    - *Only takes 2 hit for a normal mob.*
+- **Diamond Arrow** : **+100%** 
+    - *Only takes 1 hit for a normal mob.*
 
 
 ## Installation
