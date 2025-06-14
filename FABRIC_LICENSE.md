@@ -1,3 +1,5 @@
+THIS ONLY APPLIES TO  FILES BELOGING TO FABRIC.
+
 Creative Commons Legal Code
 
 CC0 1.0 Universal
