@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "arrowcrafting:item/arrow_shaft"
-  }
+    "model": {
+        "type": "model",
+        "model": "arrowcrafting:item/arrow_shaft"
+    }
 } 
