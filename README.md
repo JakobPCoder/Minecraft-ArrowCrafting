@@ -13,6 +13,8 @@ Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
 ### Arrow Heads
 4 Arrow heads are crafted from 3 pieces of the respective material and are used as crafting components for their respective arrow types.
 
+![](images/crafting_diamond_head.png)
+
 - Wooden Arrow Head
 - Stone Arrow Head
 - Flint Arrow Head
@@ -38,6 +40,8 @@ Crafting from fethers is gives 8 fletchings, while crafting from paper gives 4 f
 There are new arrow types, that work exactly like vanilla arrows, but have a damage multiplier.
 This makes them compatible with all vanilla modifiers.
 They are crafted from 1 arrow head, 1 arrow shaft and 1 arrow fletching.
+
+![](images/crafting_golden_arrow.png)
 
 New arrow types:
 - **Wooden Arrow**: **40%** 
