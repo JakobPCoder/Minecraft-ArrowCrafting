@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GG",
+    " G"
+  ],
+  "key": {
+    "G": "minecraft:gold_ingot"
+  },
+  "result": {
+    "id": "arrowcrafting:gold_arrow_head",
+    "count": 4
+  }
+} 

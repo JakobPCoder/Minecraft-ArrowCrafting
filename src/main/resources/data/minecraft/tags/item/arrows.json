@@ -1,8 +1,11 @@
 {
   "replace": false,
   "values": [
+    "arrowcrafting:wooden_arrow",
     "arrowcrafting:stone_arrow",
     "arrowcrafting:flint_arrow",
-    "arrowcrafting:iron_arrow"
+    "arrowcrafting:gold_arrow",
+    "arrowcrafting:iron_arrow",
+    "arrowcrafting:diamond_arrow"
   ]
 } 

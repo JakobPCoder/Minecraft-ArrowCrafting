@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DD",
+    " D"
+  ],
+  "key": {
+    "D": "minecraft:diamond"
+  },
+  "result": {
+    "id": "arrowcrafting:diamond_arrow_head",
+    "count": 4
+  }
+} 

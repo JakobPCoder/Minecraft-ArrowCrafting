@@ -4,5 +4,11 @@
   "item.arrowcrafting.stone_arrow_head": "Stone Arrow Head",
   "item.arrowcrafting.stone_arrow": "Stone Arrow",
   "item.arrowcrafting.flint_arrow_head": "Flint Arrow Head",
-  "item.arrowcrafting.flint_arrow": "Flint Arrow"
+  "item.arrowcrafting.flint_arrow": "Flint Arrow",
+  "item.arrowcrafting.wooden_arrow_head": "Wooden Arrow Head",
+  "item.arrowcrafting.wooden_arrow": "Wooden Arrow",
+  "item.arrowcrafting.gold_arrow_head": "Gold Arrow Head",
+  "item.arrowcrafting.gold_arrow": "Gold Arrow",
+  "item.arrowcrafting.diamond_arrow_head": "Diamond Arrow Head",
+  "item.arrowcrafting.diamond_arrow": "Diamond Arrow"
 } 

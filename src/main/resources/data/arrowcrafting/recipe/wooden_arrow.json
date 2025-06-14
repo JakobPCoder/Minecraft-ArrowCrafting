@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H",
+    "S",
+    "F"
+  ],
+  "key": {
+    "H": "arrowcrafting:wooden_arrow_head",
+    "S": "minecraft:stick",
+    "F": "minecraft:feather"
+  },
+  "result": {
+    "id": "arrowcrafting:wooden_arrow",
+    "count": 1
+  }
+} 

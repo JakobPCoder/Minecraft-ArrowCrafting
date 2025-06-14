@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP",
+    " P"
+  ],
+  "key": {
+    "P": "minecraft:planks"
+  },
+  "result": {
+    "id": "arrowcrafting:wooden_arrow_head",
+    "count": 4
+  }
+} 
