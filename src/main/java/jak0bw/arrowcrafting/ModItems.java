@@ -129,6 +129,13 @@ public class ModItems {
         new Item.Settings()
     );
 
+    // Arrow Fletching item
+    public static final Item ARROW_FLETCHING = registerItem(
+        "arrow_fletching",
+        settings -> new Item(settings),
+        new Item.Settings()
+    );
+
 
     /**
      * Registers all mod items to their respective creative tabs.
@@ -146,6 +153,7 @@ public class ModItems {
                 entries.add(IRON_ARROW_HEAD);
                 entries.add(DIAMOND_ARROW_HEAD);
                 entries.add(ARROW_SHAFT);
+                entries.add(ARROW_FLETCHING);
         });
 
         // Add iron arrow to the Combat tab

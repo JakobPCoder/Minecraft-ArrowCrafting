@@ -5,10 +5,11 @@
     " P"
   ],
   "key": {
-    "P": "#minecraft:planks"
+    "P": "minecraft:paper"
   },
   "result": {
-    "id": "arrowcrafting:wooden_arrow_head",
+    "id": "arrowcrafting:arrow_fletching",
     "count": 4
-  }
+  },
+  "mirrored": false
 } 

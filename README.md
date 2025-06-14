@@ -6,21 +6,33 @@
 
 ## Items
 
+![](images/items.png)
+
 ### Arrow Heads
-New arrow heads are crafted from 3 pieces of the respective material and are used as crafting components for their respective arrow types.
+4 Arrow heads are crafted from 3 pieces of the respective material and are used as crafting components for their respective arrow types.
+
+### Arrow Shafts
+Arrow shafts are crafted from 3 diagonally arranged pieces of either sticks, bamboo or sugar cane.
+Crafting from sticks is gives 2 shafts, while crafting from bamboo or sugar cane gives 4 shafts.
+
+### Arrow Fletching
+Arrow fletchings are crafted from either fethers or paper.
+Crafting from fethers is gives 8 fletchings, while crafting from paper gives 4 fletchings.
+
+
 
 ### Arrows
 There are new arrow types, that work exactly like vanilla arrows, but have a damage multiplier.
 This makes them compatible with all vanilla modifiers.
 
 New arrow types:
-- **Wooden Arrow**: -40%
-- **Stone Arrow**: Default 100% (Deals the same damage as a regular arrow)
-- **Flint Arrow**: +20%
-- **Gold Arrow**: +20%
-- (Copper Crafting) : +30%
-- **Iron Arrow**: +40%
-- (Steel Crafting) : +50%
+- **Wooden Arrow**: 50%
+- **Stone Arrow**: 80%
+- **Flint Arrow**: 100%
+- **Gold Arrow**: +10%
+- (*Placeholder for my coming Copper Crafting*) : +20%
+- **Iron Arrow**: +30%
+- (*Placeholder for my Steel Crafting mod*) : +40%
 - **Diamond Arrow** : +80%
 
 
