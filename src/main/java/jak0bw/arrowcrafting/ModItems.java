@@ -89,14 +89,14 @@ public class ModItems {
     // Wooden Arrow item
     public static final Item WOODEN_ARROW = registerItem(
         "wooden_arrow",
-        settings -> new CustomArrowItem(settings, 0.5),
+        settings -> new CustomArrowItem(settings, 0.4),
         new Item.Settings()
     );
 
     // Stone Arrow item (generic)
     public static final Item STONE_ARROW = registerItem(
         "stone_arrow",
-        settings -> new CustomArrowItem(settings, 0.8),
+        settings -> new CustomArrowItem(settings, 0.7),
         new Item.Settings()
     );
 
@@ -124,7 +124,7 @@ public class ModItems {
     // Iron Arrow item (generic)
     public static final Item IRON_ARROW = registerItem(
         "iron_arrow",
-        settings -> new CustomArrowItem(settings, 1.3),
+        settings -> new CustomArrowItem(settings, 1.4),
         new Item.Settings()
     );
 

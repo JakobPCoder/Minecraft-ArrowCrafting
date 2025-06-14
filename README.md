@@ -2,7 +2,9 @@
 
 [LICENSE](LICENSE.md)
 
-**ArrowCrafting** is a Fabric mod that adds new types of arrows and arrowheads, providing players with more combat options and varying arrow damage outputs.
+**ArrowCrafting** is a Fabric mod that adds new types of arrows based on the vanilla tool material progression.
+Vanilla arrows can not be crafted with this mod.
+Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
 
 ## Items
 
@@ -35,13 +37,12 @@ This makes them compatible with all vanilla modifiers.
 They are crafted from 1 arrow head, 1 arrow shaft and 1 arrow fletching.
 
 New arrow types:
-- **Wooden Arrow**: 50%
-- **Stone Arrow**: 80%
+- **Wooden Arrow**: 40%
+- **Stone Arrow**: 70%
 - **Flint Arrow**: base damage
 - **Gold Arrow**: +10%
 - **Copper Arrow**: +20%
-- **Iron Arrow**: +30%
-- (*Placeholder for my Steel Crafting mod*) : +40%
+- **Iron Arrow**: +40%
 - **Diamond Arrow** : +80%
 
 
