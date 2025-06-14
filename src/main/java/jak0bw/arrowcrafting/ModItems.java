@@ -65,12 +65,20 @@ public class ModItems {
         new Item.Settings()
     );
 
+    // Copper Arrow Head item
+    public static final Item COPPER_ARROW_HEAD = registerItem(
+        "copper_arrow_head",
+        settings -> new CustomArrowHeadItem(settings),
+        new Item.Settings()
+    );
+
     // Iron Arrow Head item (generic)
     public static final Item IRON_ARROW_HEAD = registerItem(
         "iron_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
         new Item.Settings()
     );
+
     // Diamond Arrow Head item
     public static final Item DIAMOND_ARROW_HEAD = registerItem(
         "diamond_arrow_head",
@@ -78,32 +86,37 @@ public class ModItems {
         new Item.Settings()
     );
 
-
-
     // Wooden Arrow item
     public static final Item WOODEN_ARROW = registerItem(
         "wooden_arrow",
-        settings -> new CustomArrowItem(settings, 0.6),
+        settings -> new CustomArrowItem(settings, 0.5),
         new Item.Settings()
     );
 
     // Stone Arrow item (generic)
     public static final Item STONE_ARROW = registerItem(
         "stone_arrow",
-        settings -> new CustomArrowItem(settings, 1.0),
+        settings -> new CustomArrowItem(settings, 0.8),
         new Item.Settings()
     );
 
     // Flint Arrow item (generic)
     public static final Item FLINT_ARROW = registerItem(
         "flint_arrow",
-        settings -> new CustomArrowItem(settings, 1.2),
+        settings -> new CustomArrowItem(settings, 1.0),
         new Item.Settings()
     );
 
     // Gold Arrow item
     public static final Item GOLD_ARROW = registerItem(
         "gold_arrow",
+        settings -> new CustomArrowItem(settings, 1.1),
+        new Item.Settings()
+    );
+
+    // Copper Arrow item
+    public static final Item COPPER_ARROW = registerItem(
+        "copper_arrow",
         settings -> new CustomArrowItem(settings, 1.2),
         new Item.Settings()
     );
@@ -111,7 +124,7 @@ public class ModItems {
     // Iron Arrow item (generic)
     public static final Item IRON_ARROW = registerItem(
         "iron_arrow",
-        settings -> new CustomArrowItem(settings, 1.4),
+        settings -> new CustomArrowItem(settings, 1.3),
         new Item.Settings()
     );
 
@@ -150,6 +163,7 @@ public class ModItems {
                 entries.add(STONE_ARROW_HEAD);
                 entries.add(FLINT_ARROW_HEAD);
                 entries.add(GOLD_ARROW_HEAD);
+                entries.add(COPPER_ARROW_HEAD);
                 entries.add(IRON_ARROW_HEAD);
                 entries.add(DIAMOND_ARROW_HEAD);
                 entries.add(ARROW_SHAFT);
@@ -162,6 +176,7 @@ public class ModItems {
             entries.add(STONE_ARROW);
             entries.add(FLINT_ARROW);
             entries.add(GOLD_ARROW);
+            entries.add(COPPER_ARROW);
             entries.add(IRON_ARROW);
             entries.add(DIAMOND_ARROW);
         });

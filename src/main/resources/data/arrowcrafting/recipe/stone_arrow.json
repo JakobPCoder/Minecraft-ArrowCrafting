@@ -8,7 +8,7 @@
   "key": {
     "H": "arrowcrafting:stone_arrow_head",
     "S": "arrowcrafting:arrow_shaft",
-    "F": "minecraft:feather"
+    "F": "arrowcrafting:arrow_fletching"
   },
   "result": {
     "id": "arrowcrafting:stone_arrow",

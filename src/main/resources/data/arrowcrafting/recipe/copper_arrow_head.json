@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SS",
-    " S"
+    "CC",
+    " C"
   ],
   "key": {
-    "S": "minecraft:cobblestone"
+    "C": "minecraft:copper_ingot"
   },
   "result": {
-    "id": "arrowcrafting:stone_arrow_head",
+    "id": "arrowcrafting:copper_arrow_head",
     "count": 4
   }
 } 
