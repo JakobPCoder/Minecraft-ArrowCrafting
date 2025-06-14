@@ -53,7 +53,7 @@ New arrow types:
 - **Gold Arrow**: **+10%** 
     - *Takes 2 hits for a normal mob.*
 - **Copper Arrow**: **+20%** 
-    - *Only takes 2 hits for a normal mob. 1 hit for a zombie.*
+    - *Only takes 2 hits for a normal mob.*
 - **Iron Arrow**: **+40%** 
     - *Only takes 2 hit for a normal mob.*
 - **Diamond Arrow** : **+100%** 
