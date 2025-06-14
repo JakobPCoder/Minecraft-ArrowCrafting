@@ -7,7 +7,7 @@
   ],
   "key": {
     "H": "arrowcrafting:stone_arrow_head",
-    "S": "minecraft:stick",
+    "S": "arrowcrafting:arrow_shaft",
     "F": "minecraft:feather"
   },
   "result": {

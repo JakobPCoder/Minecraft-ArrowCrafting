@@ -104,21 +104,28 @@ public class ModItems {
     // Gold Arrow item
     public static final Item GOLD_ARROW = registerItem(
         "gold_arrow",
-        settings -> new CustomArrowItem(settings, 1.4),
+        settings -> new CustomArrowItem(settings, 1.2),
         new Item.Settings()
     );
 
     // Iron Arrow item (generic)
     public static final Item IRON_ARROW = registerItem(
         "iron_arrow",
-        settings -> new CustomArrowItem(settings, 1.6),
+        settings -> new CustomArrowItem(settings, 1.4),
         new Item.Settings()
     );
 
     // Diamond Arrow item
     public static final Item DIAMOND_ARROW = registerItem(
         "diamond_arrow",
-        settings -> new CustomArrowItem(settings, 2.0),
+        settings -> new CustomArrowItem(settings, 1.8),
+        new Item.Settings()
+    );
+
+    // Arrow Shaft item
+    public static final Item ARROW_SHAFT = registerItem(
+        "arrow_shaft",
+        settings -> new Item(settings),
         new Item.Settings()
     );
 
@@ -138,6 +145,7 @@ public class ModItems {
                 entries.add(GOLD_ARROW_HEAD);
                 entries.add(IRON_ARROW_HEAD);
                 entries.add(DIAMOND_ARROW_HEAD);
+                entries.add(ARROW_SHAFT);
         });
 
         // Add iron arrow to the Combat tab
