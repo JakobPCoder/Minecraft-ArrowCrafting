@@ -4,6 +4,7 @@ import jak0bw.arrowcrafting.item.CustomArrowHeadItem;
 import jak0bw.arrowcrafting.item.CustomArrowItem;
 
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.RegistryKey;
@@ -26,13 +27,17 @@ public class ModItems {
      * @param settings Item settings
      * @return The registered Item
      */
-    private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
+    private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings, String... dependencies) {
+        for (String modId : dependencies) {
+            if (!FabricLoader.getInstance().isModLoaded(modId)) {
+                return null; 
+            }
+        }
+    
         Identifier id = Identifier.of(ArrowCrafting.MOD_ID, name);
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
         return Items.register(key, factory, settings);
     }
-
-
 
 
     
@@ -69,7 +74,8 @@ public class ModItems {
     public static final Item COPPER_ARROW_HEAD = registerItem(
         "copper_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        "coppercrafting"
     );
 
     // Iron Arrow Head item (generic)
@@ -118,7 +124,8 @@ public class ModItems {
     public static final Item COPPER_ARROW = registerItem(
         "copper_arrow",
         settings -> new CustomArrowItem(settings, 1.2),
-        new Item.Settings()
+        new Item.Settings(),
+        "coppercrafting"
     );
 
     // Iron Arrow item (generic)
@@ -154,6 +161,19 @@ public class ModItems {
      * Registers all mod items to their respective creative tabs.
      * Should be called during mod initialization.
      */
+
+    public static void registerCopperItems() {
+        if (FabricLoader.getInstance().isModLoaded("coppercrafting")) {
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+                entries.add(COPPER_ARROW_HEAD);
+            });
+
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+                entries.add(COPPER_ARROW);
+            });
+        }
+    }
+
     public static void registerModItems() {
         ArrowCrafting.LOGGER.info("Adding Mod Items to creative tabs for " + ArrowCrafting.MOD_ID);
 
@@ -163,7 +183,6 @@ public class ModItems {
                 entries.add(STONE_ARROW_HEAD);
                 entries.add(FLINT_ARROW_HEAD);
                 entries.add(GOLD_ARROW_HEAD);
-                entries.add(COPPER_ARROW_HEAD);
                 entries.add(IRON_ARROW_HEAD);
                 entries.add(DIAMOND_ARROW_HEAD);
                 entries.add(ARROW_SHAFT);
@@ -176,10 +195,12 @@ public class ModItems {
             entries.add(STONE_ARROW);
             entries.add(FLINT_ARROW);
             entries.add(GOLD_ARROW);
-            entries.add(COPPER_ARROW);
             entries.add(IRON_ARROW);
             entries.add(DIAMOND_ARROW);
         });
+
+        // Add copper items if the coppercrafting mod is loaded
+        registerCopperItems();
     }
 
 } 

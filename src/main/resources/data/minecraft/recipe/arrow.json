@@ -6,15 +6,9 @@
     " P "
   ],
   "key": {
-    "F": {
-      "item": "minecraft:flint"
-    },
-    "S": {
-      "item": "minecraft:stick"
-    },
-    "P": {
-      "item": "minecraft:feather"
-    }
+    "F": "minecraft:flint",
+    "S": "minecraft:stick",
+    "P": "minecraft:feather"
   },
   "result": {
     "id": "minecraft:air",
