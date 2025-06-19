@@ -45,20 +45,15 @@ They are crafted from 1 arrow head, 1 arrow shaft and 1 arrow fletching.
 
 New arrow types:
 - **Wooden Arrow**: **40%** 
-    - *~5 hits for a normal mob.*
-- **Stone Arrow**: **60%** 
-    - *~4 hits for a normal mob.*
+- **Stone Arrow**: **70%** 
 - **Flint Arrow**: Base damage. 
-    - *~3 hits for a normal mob.*
-- **Gold Arrow**: **+10%** 
-    - *~2-3 hits for a normal mob.*
-- **Copper Arrow**: **+20%** 
-    - ***Optional**, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
-    - *~2-3 hits for a normal mob.*
-- **Iron Arrow**: **+40%** 
-    - *~2 hits for a normal mob.*
+- **Gold Arrow**: **+20%** 
+-   > **Copper Arrow**: **+30%** 
+    >***Optional**, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
+- **Iron Arrow**: **+50%** 
+-   > **Steel Arrow**: **+60%** 
+    >***Optional**, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
 - **Diamond Arrow** : **+100%** 
-    - *~1-2 hits for a normal mob.*
 
 
 ## Installation

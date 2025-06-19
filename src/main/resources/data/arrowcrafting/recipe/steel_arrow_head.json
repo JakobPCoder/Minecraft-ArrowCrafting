@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "PP",
-    " P"
+    "SS",
+    " S"
   ],
   "key": {
-    "P": "minecraft:paper"
+    "S": "steelcrafting:steel_ingot"
   },
   "result": {
-    "id": "arrowcrafting:arrow_fletching",
+    "id": "arrowcrafting:steel_arrow_head",
     "count": 8
   }
 } 

@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 public class ModEntities {
     
     /**
-     * Custom Arrow Entity Type - extends ArrowEntity with increased damage
+     * Wood Arrow Entity Type - extends ArrowEntity with increased damage
      */
     public static final EntityType<CustomArrowEntity> CUSTOM_ARROW = Registry.register(
         Registries.ENTITY_TYPE,
@@ -26,7 +26,8 @@ public class ModEntities {
             .trackingTickInterval(20)
             .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(ArrowCrafting.MOD_ID, "custom_arrow")))
     );
-    
+
+
     /**
      * Registers all mod entities.
      * Should be called during mod initialization.

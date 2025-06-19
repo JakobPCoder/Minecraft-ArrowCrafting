@@ -1,5 +1,5 @@
 ---
-description: Adding new Item or Arrow Type or Entity
+description: when adding items or editing them, always load this.
 globs: 
 alwaysApply: false
 ---

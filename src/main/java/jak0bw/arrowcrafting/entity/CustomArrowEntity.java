@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import net.minecraft.client.render.entity.ArrowEntityRenderer;
 
 /**
  * Custom Arrow Entity
@@ -43,6 +44,9 @@ public class CustomArrowEntity extends ArrowEntity {
         this.setDamage(this.getDamage() * this.arrowDamageMultiplier);
     }
 
+
+
+    
     public CustomArrowEntity(double arrowDamageMultiplier, EntityType<? extends ArrowEntity> entityType, World world) {
         super(entityType, world);
         this.arrowDamageMultiplier = arrowDamageMultiplier;
