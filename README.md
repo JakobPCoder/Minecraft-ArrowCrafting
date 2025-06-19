@@ -8,11 +8,13 @@ Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
 
 ## Items
 
+***Note: Images are outdated.***
 ![](images/items.png)
 
 ### Arrow Heads
-4 Arrow heads are crafted from 3 pieces of the respective material and are used as crafting components for their respective arrow types.
+**8 Arrow heads** are crafted from 3 pieces of the respective material and are used as crafting components for their respective arrow types.
 
+***Note: Images are outdated.***
 ![](images/crafting_diamond_head.png)
 
 - Wooden Arrow Head
@@ -25,14 +27,15 @@ Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
 
 ### Arrow Shafts
 Arrow shafts are crafted from 3 diagonally arranged pieces of either sticks, bamboo or sugar cane.
-Crafting from sticks is gives 2 shafts, while crafting from bamboo or sugar cane gives 4 shafts.
+Crafting from sticks is **gives 2 shafts**, while crafting from bamboo or sugar cane gives **4 shafts**.
 
 ![](images/crafting_shaft_a.png) ![](images/crafting_shaft_b.png) ![](images/crafting_shaft_c.png)
 
 ### Arrow Fletching
 Arrow fletchings are crafted from either fethers or paper.
-Crafting from fethers is gives 8 fletchings, while crafting from paper gives 4 fletchings.
+Crafting from fethers is gives **16 fletchings**, while crafting from paper gives **8 fletchings**.
 
+***Note: Images are outdated.***
 ![](images/crafting_fletching_a.png) ![](images/crafting_fletching_b.png)
 
 
