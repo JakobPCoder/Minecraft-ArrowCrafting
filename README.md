@@ -2,9 +2,17 @@
 
 [LICENSE](LICENSE.md)
 
-**ArrowCrafting** is a Fabric mod that adds new types of arrows based on the vanilla tool material progression.
-Vanilla arrows can not be crafted with this mod.
+**ArrowCrafting** is a Fabric mod that adds new types of arrows based on the vanilla tool materials.
+The goal was to make Ranged gameplay more interesting by adding a new layer of progression, just like other item types have.
 Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
+Vanilla arrows can not be crafted with this mod, but can still be dropped or found in the world.
+
+
+This mod also adds integration of my following mods:
+- [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting)
+- [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting)
+
+If either of these mods is installed, the respective arrow heads and arrows will be added.
 
 ## Items
 
@@ -19,9 +27,9 @@ Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
 - Stone Arrow Head
 - Flint Arrow Head
 - Gold Arrow Head
--   > **Copper Arrow Head** | *Optional, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
-- Iron Arrow Head **+30%**
--   > **Steel Arrow Head** | *Optional, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
+-   > Copper Arrow Head | *Optional, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
+- Iron Arrow Head 
+-   > Steel Arrow Head | *Optional, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
 - Diamond Arrow Head
 
 ### Arrow Shafts
@@ -39,13 +47,12 @@ Crafting from fethers is gives **16 fletchings**, while crafting from paper give
 
 
 ### Arrows
-There are new arrow types, that work exactly like vanilla arrows, but have a damage multiplier.
-This makes them compatible with all vanilla modifiers.
-They are crafted from 1 arrow head, 1 arrow shaft and 1 arrow fletching.
+There are new arrow types, that work exactly like vanilla arrows, but all have different damage values.
+- Damage changes compared to vanilla arrows are implemented as multipliers / percentages, so they are compatible with all vanilla modifiers.
+- The ***Infinity*** enchantment is not supported on purpose, as it breaks any kind of balance.
+- They are crafted from 1 arrow head, 1 arrow shaft and 1 arrow fletching.
 
-![](images/crafting_diamond_arrow.png)![](images/crafting_copper_arrow.png)
-
-New arrow types:
+**Arrow types:**
 - **Wooden Arrow**: **40%** 
 - **Stone Arrow**: **70%** 
 - **Flint Arrow**: Base damage. 
@@ -55,6 +62,7 @@ New arrow types:
 -   > **Steel Arrow**: **+60%** | *Optional, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
 - **Diamond Arrow** : **+100%** 
 
+![](images/crafting_diamond_arrow.png)![](images/crafting_copper_arrow.png)
 
 ## Installation
 
