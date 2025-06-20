@@ -8,35 +8,34 @@ Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
 
 ## Items
 
-***Note: Images are outdated.***
 ![](images/items.png)
 
 ### Arrow Heads
 **8 Arrow heads** are crafted from 3 pieces of the respective material and are used as crafting components for their respective arrow types.
 
-***Note: Images are outdated.***
-![](images/crafting_diamond_head.png)
+![](images/crafting_diamond_arrow_head.png)![](images/crafting_copper_arrow_head.png)
 
 - Wooden Arrow Head
 - Stone Arrow Head
 - Flint Arrow Head
 - Gold Arrow Head
-- Copper Arrow Head
-- Iron Arrow Head
+-   > **Copper Arrow Head** | *Optional, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
+- Iron Arrow Head **+30%**
+-   > **Steel Arrow Head** | *Optional, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
 - Diamond Arrow Head
 
 ### Arrow Shafts
 Arrow shafts are crafted from 3 diagonally arranged pieces of either sticks, bamboo or sugar cane.
 Crafting from sticks is **gives 2 shafts**, while crafting from bamboo or sugar cane gives **4 shafts**.
 
-![](images/crafting_shaft_a.png) ![](images/crafting_shaft_b.png) ![](images/crafting_shaft_c.png)
+![](images/crafting_shaft_a.png)![](images/crafting_shaft_b.png)![](images/crafting_shaft_c.png)
 
 ### Arrow Fletching
 Arrow fletchings are crafted from either fethers or paper.
 Crafting from fethers is gives **16 fletchings**, while crafting from paper gives **8 fletchings**.
 
-***Note: Images are outdated.***
-![](images/crafting_fletching_a.png) ![](images/crafting_fletching_b.png)
+
+![](images/crafting_fletching_a.png)![](images/crafting_fletching_b.png)
 
 
 ### Arrows
@@ -44,18 +43,16 @@ There are new arrow types, that work exactly like vanilla arrows, but have a dam
 This makes them compatible with all vanilla modifiers.
 They are crafted from 1 arrow head, 1 arrow shaft and 1 arrow fletching.
 
-![](images/crafting_golden_arrow.png)
+![](images/crafting_diamond_arrow.png)![](images/crafting_copper_arrow.png)
 
 New arrow types:
 - **Wooden Arrow**: **40%** 
 - **Stone Arrow**: **70%** 
 - **Flint Arrow**: Base damage. 
 - **Gold Arrow**: **+20%** 
--   > **Copper Arrow**: **+30%** 
-    >***Optional**, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
+-   > **Copper Arrow**: **+30%** | *Optional, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
 - **Iron Arrow**: **+50%** 
--   > **Steel Arrow**: **+60%** 
-    >***Optional**, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
+-   > **Steel Arrow**: **+60%** | *Optional, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
 - **Diamond Arrow** : **+100%** 
 
 
