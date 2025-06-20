@@ -2,6 +2,8 @@
 
 [LICENSE](LICENSE.md)
 
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/arrowcrafting)
+
 **ArrowCrafting** is a Fabric mod that adds new types of arrows based on the vanilla tool materials.
 The goal was to make Ranged gameplay more interesting by adding a new layer of progression, just like other item types have.
 Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
