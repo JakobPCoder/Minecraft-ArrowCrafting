@@ -17,5 +17,5 @@
   "item.arrowcrafting.steel_arrow": "Steel Arrow",
   "item.arrowcrafting.arrow_shaft": "Arrow Shaft",
   "item.arrowcrafting.arrow_fletching": "Arrow Fletching",
-  "item.arrowcrafting.arrow.damage": "%s Damage"
+  "item.arrowcrafting.arrow.damage": "Damage: %s "
 } 
