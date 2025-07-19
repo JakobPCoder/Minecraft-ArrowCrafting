@@ -5,7 +5,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.ArrowItem;
-import net.minecraft.item.SwordItem;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.TridentItem;
@@ -53,8 +52,7 @@ public class CustomArrowItem extends ArrowItem {
     }
     
     @Override
-    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.translatable("item.arrowcrafting.arrow.damage", (int)(100 * this.arrowDamageMultiplier) + "%")
-            .formatted(Formatting.BLUE, Formatting.ITALIC));
+    public void appendTooltip(ItemStack stack, TooltipContext context, net.minecraft.component.type.TooltipDisplayComponent displayComponent, java.util.function.Consumer<net.minecraft.text.Text> textConsumer, TooltipType type) {
+        textConsumer.accept(net.minecraft.text.Text.translatable("item.arrowcrafting.arrow.damage", (int)(100 * this.arrowDamageMultiplier) + "%").formatted(Formatting.BLUE, Formatting.ITALIC));
     }
 } 

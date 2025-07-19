@@ -11,6 +11,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
 import net.minecraft.item.ItemGroups;
 
@@ -18,25 +20,31 @@ import net.minecraft.item.ItemGroups;
  * Handles registration and creative tab assignment for all SteelCrafting mod items.
  */
 public class ModItems {
+    // Holds all group addEntry actions to be performed at mod item registration
+    private static List<Runnable> groupAddEntryActions = new ArrayList<>();
 
     /**
-     * Registers an item with the given name, factory, and settings.
+     * Registers an item with optional mod dependencies and creative tab groups.
+     * Delays the registration of the item until the mod is fully initialized,
+     * by adding it to a list of actions to be performed at mod item registration.
      *
-     * @param name     Path part of the identifier (e.g., "steel_ingot")
-     * @param factory  Function to create the item from settings
-     * @param settings Item settings
-     * @return The registered Item
+     * @param name The name of the item to register.
+     * @param factory A function that creates the item from the given Item.Settings.
+     * @param settings The settings to use for the item.
+     * @param groups The creative tab groups to which the item should be added.
+     * @param dependencies Optional mod IDs that must be loaded for this item to be registered.
+     * @return The registered Item, or null if any dependency is missing.
      */
-    private static Item registerItem(String name, Function<Item.Settings, Item> factory, Item.Settings settings, String... dependencies) {
-        for (String modId : dependencies) {
-            if (!FabricLoader.getInstance().isModLoaded(modId)) {
-                return null; 
-            }
-        }
-    
-        Identifier id = Identifier.of(ArrowCrafting.MOD_ID, name);
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        return Items.register(key, factory, settings);
+    private static Item registerItem(String name, Function<Item.Settings, Item> factory, 
+                                   Item.Settings settings, List<RegistryKey<ItemGroup>> groups, String... dependencies) {
+        // Check dependencies
+        if (java.util.Arrays.stream(dependencies).anyMatch(modId -> !FabricLoader.getInstance().isModLoaded(modId))) return null;
+        // Register item
+        Item item = Items.register(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ArrowCrafting.MOD_ID, name)), factory, settings);
+        // Registers the item in the game's item registry under the mod's namespace.
+        if (groups != null) groups.forEach(group -> 
+            groupAddEntryActions.add(() -> ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item))));
+        return item;
     }
 
 
@@ -45,14 +53,16 @@ public class ModItems {
     public static final Item WOODEN_ARROW_HEAD = registerItem(
         "wooden_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
     // Stone Arrow Head item (generic)
     public static final Item STONE_ARROW_HEAD = registerItem(
         "stone_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
 
@@ -60,14 +70,16 @@ public class ModItems {
     public static final Item FLINT_ARROW_HEAD = registerItem(
         "flint_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
     // Gold Arrow Head item
     public static final Item GOLD_ARROW_HEAD = registerItem(
         "gold_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
     // Copper Arrow Head item
@@ -75,29 +87,32 @@ public class ModItems {
         "copper_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
         new Item.Settings(),
-        "coppercrafting"
+        List.of(ItemGroups.INGREDIENTS)
     );
 
     // Iron Arrow Head item (generic)
     public static final Item IRON_ARROW_HEAD = registerItem(
         "iron_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
-    // Steel Arrow Head item
-    public static final Item STEEL_ARROW_HEAD = registerItem(
-        "steel_arrow_head",
-        settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings(),
-        "steelcrafting"
-    );
+    // // Steel Arrow Head item
+    // public static final Item STEEL_ARROW_HEAD = registerItem(
+    //     "steel_arrow_head",
+    //     settings -> new CustomArrowHeadItem(settings),
+    //     new Item.Settings(),
+    //     List.of(ItemGroups.INGREDIENTS),
+    //     "steelcrafting"
+    // );
 
     // Diamond Arrow Head item
     public static final Item DIAMOND_ARROW_HEAD = registerItem(
         "diamond_arrow_head",
         settings -> new CustomArrowHeadItem(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
 
@@ -106,28 +121,32 @@ public class ModItems {
     public static final Item WOODEN_ARROW = registerItem(
         "wooden_arrow",
         settings -> new CustomArrowItem(settings, 0.4),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.COMBAT)
     );
 
     // Stone Arrow item (generic)
     public static final Item STONE_ARROW = registerItem(
         "stone_arrow",
         settings -> new CustomArrowItem(settings, 0.7),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.COMBAT)
     );
 
     // Flint Arrow item (generic)
     public static final Item FLINT_ARROW = registerItem(
         "flint_arrow",
         settings -> new CustomArrowItem(settings, 1.0),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.COMBAT)
     );
 
     // Gold Arrow item
     public static final Item GOLD_ARROW = registerItem(
         "gold_arrow",
         settings -> new CustomArrowItem(settings, 1.2),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.COMBAT)
     );
 
     // Copper Arrow item
@@ -135,29 +154,32 @@ public class ModItems {
         "copper_arrow",
         settings -> new CustomArrowItem(settings, 1.3),
         new Item.Settings(),
-        "coppercrafting"
+        List.of(ItemGroups.COMBAT)
     );
 
     // Iron Arrow item (generic)
     public static final Item IRON_ARROW = registerItem(
         "iron_arrow",
         settings -> new CustomArrowItem(settings, 1.5),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.COMBAT)
     );
 
-    // Steel Arrow item
-    public static final Item STEEL_ARROW = registerItem(
-        "steel_arrow",
-        settings -> new CustomArrowItem(settings, 1.6),
-        new Item.Settings(),
-        "steelcrafting"
-    );
+    // // Steel Arrow item
+    // public static final Item STEEL_ARROW = registerItem(
+    //     "steel_arrow",
+    //     settings -> new CustomArrowItem(settings, 1.6),
+    //     new Item.Settings(),
+    //     List.of(ItemGroups.COMBAT),
+    //     "steelcrafting"
+    // );
 
     // Diamond Arrow item
     public static final Item DIAMOND_ARROW = registerItem(
         "diamond_arrow",
         settings -> new CustomArrowItem(settings, 2.0),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.COMBAT)
     );
 
 
@@ -165,66 +187,24 @@ public class ModItems {
     public static final Item ARROW_SHAFT = registerItem(
         "arrow_shaft",
         settings -> new Item(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
     // Arrow Fletching item
     public static final Item ARROW_FLETCHING = registerItem(
         "arrow_fletching",
         settings -> new Item(settings),
-        new Item.Settings()
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
     );
 
 
-    // --- TAB-SPECIFIC REGISTRATION WRAPPERS ---
-
-    // INGREDIENTS TAB
-
-    private static void registerIngredientsTabItems() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(WOODEN_ARROW_HEAD);
-            entries.add(STONE_ARROW_HEAD);
-            entries.add(FLINT_ARROW_HEAD);
-            entries.add(GOLD_ARROW_HEAD);
-        });
-
-        if (FabricLoader.getInstance().isModLoaded("coppercrafting")) 
-            ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { entries.add(COPPER_ARROW_HEAD); });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { entries.add(IRON_ARROW_HEAD); });
-        if (FabricLoader.getInstance().isModLoaded("steelcrafting")) 
-            ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> { entries.add(STEEL_ARROW_HEAD); });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(DIAMOND_ARROW_HEAD);
-            entries.add(ARROW_SHAFT);
-            entries.add(ARROW_FLETCHING);
-        });
-    }
-
-
-    private static void registerCombatTabItems() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(WOODEN_ARROW);
-            entries.add(STONE_ARROW);
-            entries.add(FLINT_ARROW);
-            entries.add(GOLD_ARROW);
-        });
-
-        if (FabricLoader.getInstance().isModLoaded("coppercrafting")) 
-            ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> { entries.add(COPPER_ARROW); });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> { entries.add(IRON_ARROW); });
-        if (FabricLoader.getInstance().isModLoaded("steelcrafting")) 
-            ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> { entries.add(STEEL_ARROW); });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> { entries.add(DIAMOND_ARROW); });
-    }
-
-    /**
-     * Registers all mod items to their respective creative tabs.
-     * Should be called during mod initialization.
-     */
     public static void registerModItems() {
         ArrowCrafting.LOGGER.info("Adding Mod Items to creative tabs for " + ArrowCrafting.MOD_ID);
-        registerIngredientsTabItems();
-        registerCombatTabItems();
+        for (Runnable action : groupAddEntryActions) {
+            action.run();
+        }
     }
 
 } 
