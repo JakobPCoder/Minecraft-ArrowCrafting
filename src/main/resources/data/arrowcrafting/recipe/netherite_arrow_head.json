@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NN",
+    " N"
+  ],
+  "key": {
+    "N": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "id": "arrowcrafting:netherite_arrow_head",
+    "count": 8
+  }
+} 

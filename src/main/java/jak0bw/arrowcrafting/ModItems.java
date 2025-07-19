@@ -48,7 +48,6 @@ public class ModItems {
     }
 
 
-    
     // Wooden Arrow Head item
     public static final Item WOODEN_ARROW_HEAD = registerItem(
         "wooden_arrow_head",
@@ -98,15 +97,6 @@ public class ModItems {
         List.of(ItemGroups.INGREDIENTS)
     );
 
-    // // Steel Arrow Head item
-    // public static final Item STEEL_ARROW_HEAD = registerItem(
-    //     "steel_arrow_head",
-    //     settings -> new CustomArrowHeadItem(settings),
-    //     new Item.Settings(),
-    //     List.of(ItemGroups.INGREDIENTS),
-    //     "steelcrafting"
-    // );
-
     // Diamond Arrow Head item
     public static final Item DIAMOND_ARROW_HEAD = registerItem(
         "diamond_arrow_head",
@@ -115,6 +105,13 @@ public class ModItems {
         List.of(ItemGroups.INGREDIENTS)
     );
 
+    // Netherite Arrow Head item
+    public static final Item NETHERITE_ARROW_HEAD = registerItem(
+        "netherite_arrow_head",
+        settings -> new CustomArrowHeadItem(settings),
+        new Item.Settings(),
+        List.of(ItemGroups.INGREDIENTS)
+    );
 
 
     // Wooden Arrow item
@@ -144,7 +141,7 @@ public class ModItems {
     // Gold Arrow item
     public static final Item GOLD_ARROW = registerItem(
         "gold_arrow",
-        settings -> new CustomArrowItem(settings, 1.2),
+        settings -> new CustomArrowItem(settings, 1.0),
         new Item.Settings(),
         List.of(ItemGroups.COMBAT)
     );
@@ -152,7 +149,7 @@ public class ModItems {
     // Copper Arrow item
     public static final Item COPPER_ARROW = registerItem(
         "copper_arrow",
-        settings -> new CustomArrowItem(settings, 1.3),
+        settings -> new CustomArrowItem(settings, 1.2),
         new Item.Settings(),
         List.of(ItemGroups.COMBAT)
     );
@@ -160,23 +157,22 @@ public class ModItems {
     // Iron Arrow item (generic)
     public static final Item IRON_ARROW = registerItem(
         "iron_arrow",
-        settings -> new CustomArrowItem(settings, 1.5),
+        settings -> new CustomArrowItem(settings, 1.4),
         new Item.Settings(),
         List.of(ItemGroups.COMBAT)
     );
 
-    // // Steel Arrow item
-    // public static final Item STEEL_ARROW = registerItem(
-    //     "steel_arrow",
-    //     settings -> new CustomArrowItem(settings, 1.6),
-    //     new Item.Settings(),
-    //     List.of(ItemGroups.COMBAT),
-    //     "steelcrafting"
-    // );
-
     // Diamond Arrow item
     public static final Item DIAMOND_ARROW = registerItem(
         "diamond_arrow",
+        settings -> new CustomArrowItem(settings, 1.6),
+        new Item.Settings(),
+        List.of(ItemGroups.COMBAT)
+    );
+
+    // Netherite Arrow item
+    public static final Item NETHERITE_ARROW = registerItem(
+        "netherite_arrow",
         settings -> new CustomArrowItem(settings, 2.0),
         new Item.Settings(),
         List.of(ItemGroups.COMBAT)

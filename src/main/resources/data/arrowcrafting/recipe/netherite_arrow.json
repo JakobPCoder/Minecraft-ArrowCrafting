@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  H",
+    " S ",
+    "F  "
+  ],
+  "key": {
+    "H": "arrowcrafting:netherite_arrow_head",
+    "S": "arrowcrafting:arrow_shaft",
+    "F": "arrowcrafting:arrow_fletching"
+  },
+  "result": {
+    "id": "arrowcrafting:netherite_arrow",
+    "count": 1
+  }
+} 

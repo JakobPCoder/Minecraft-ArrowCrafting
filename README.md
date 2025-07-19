@@ -10,12 +10,6 @@ Arrows are crafted from arrow heads, arrow shafts and arrow fletchings.
 Vanilla arrows can not be crafted with this mod, but can still be dropped or found in the world.
 
 
-This mod also adds integration of my following mods:
-- [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting)
-- [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting)
-
-If either of these mods is installed, the respective arrow heads and arrows will be added.
-
 ## Items
 
 ![](images/items.png)
@@ -29,9 +23,8 @@ If either of these mods is installed, the respective arrow heads and arrows will
 - Stone Arrow Head
 - Flint Arrow Head
 - Gold Arrow Head
--   > Copper Arrow Head | *Optional, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
+- Copper Arrow Head
 - Iron Arrow Head 
--   > Steel Arrow Head | *Optional, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
 - Diamond Arrow Head
 
 ### Arrow Shafts
@@ -59,9 +52,8 @@ There are new arrow types, that work exactly like vanilla arrows, but all have d
 - **Stone Arrow**: **70%** 
 - **Flint Arrow**: Base damage. 
 - **Gold Arrow**: **+20%** 
--   > **Copper Arrow**: **+30%** | *Optional, when [CopperCrafting](https://www.curseforge.com/minecraft/mc-mods/coppercrafting) is installed.*
+- **Copper Arrow**: **+30%** 
 - **Iron Arrow**: **+50%** 
--   > **Steel Arrow**: **+60%** | *Optional, when [SteelCrafting](https://www.curseforge.com/minecraft/mc-mods/steelcrafting) is installed.*
 - **Diamond Arrow** : **+100%** 
 
 ![](images/crafting_diamond_arrow.png)![](images/crafting_copper_arrow.png)
