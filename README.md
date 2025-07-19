@@ -26,6 +26,7 @@ Vanilla arrows can not be crafted with this mod, but can still be dropped or fou
 - Copper Arrow Head
 - Iron Arrow Head 
 - Diamond Arrow Head
+- Netherite Arrow Head
 
 ### Arrow Shafts
 Arrow shafts are crafted from 3 diagonally arranged pieces of either sticks, bamboo or sugar cane.
@@ -51,10 +52,11 @@ There are new arrow types, that work exactly like vanilla arrows, but all have d
 - **Wooden Arrow**: **40%** 
 - **Stone Arrow**: **70%** 
 - **Flint Arrow**: Base damage. 
-- **Gold Arrow**: **+20%** 
-- **Copper Arrow**: **+30%** 
-- **Iron Arrow**: **+50%** 
-- **Diamond Arrow** : **+100%** 
+- **Gold Arrow**: Base damage. 
+- **Copper Arrow**: **+20%** 
+- **Iron Arrow**: **+40%** 
+- **Diamond Arrow**: **+60%** 
+- **Netherite Arrow**: **+100%** 
 
 ![](images/crafting_diamond_arrow.png)![](images/crafting_copper_arrow.png)
 
